@@ -1,5 +1,6 @@
 const map = L.map('map').setView([-15.793889, -47.882778], 4);
 
+
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
@@ -23,9 +24,9 @@ document.getElementById('searchBtn').addEventListener('click', async () => {
             }
 
             markupFirst = L.marker([lat, lon]).addTo(map)
-                .bindPopup(display_name)
-                .openPopup();
-
+                /*.bindPopup(display_name)
+                .openPopup()*/;
+                
             map.setView([lat, lon], 15);
         } else {
             alert('Não foi possivel encontrar o local!');

@@ -2,12 +2,34 @@ html,
 body {
     height: 90%;
     margin: 0;
+    background-image: linear-gradient(to right, rgb(9, 31, 224), rgb(182, 228, 243));
 }
 
-.testesWH {
-    height: 60% !important;
-    width: 50%;
-    margin: 10% 0% 0% 25%;
+.box-maps {
+    height: 100% !important;
+    width: 100% !important;
+    margin: 10px;
     border: 2px solid black;
-    border-radius: 2%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgb(84, 86, 87);
+}
+
+.box-weather,
+.box-data {
+    height: 100% !important;
+    width: 50% !important;
+    margin: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 5px 5px 5px rgb(84, 86, 87);
+}
+
+.container-box {
+    width: 90%;
+    height: 60%;
+    display: flex;
+    width: 90%;
+    height: 60%;
+    margin: 10% 0 0 5%;
 }
