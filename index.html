@@ -27,51 +27,64 @@
     </div>
     <div class="container-box">
         <div class="box-weather z-0">
-            <div class="info">
-                <i id="locationIcon" class="fa-solid fa-location-dot"></i>
-                <div>
-                    <h4>Localização</h4>
-                    <p id="location">
-                        Cidade
-                    </p>
+            <div id="info">
+                <div class="info">
+                    <i id="locationIcon" class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <h4>Localização</h4>
+                        <p id="location">
+                            Cidade
+                        </p>
+                    </div>
+                </div>
+                <div class="info"> 
+                    <i class="fa-solid fa-temperature-three-quarters"></i>
+                    <div>
+                        <p id="temp">
+                            30 <sup>C°</sup>
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="info">
-                <i id="tempMaxIcon" class="fa-solid fa-temperature-high"></i>
-                <div>
-                    <h4>Temp. max</h4>
-                    <p id="tempMax">
-                        30 <sup>C°</sup>
-                    </p>
+            <div id="others-info">
+                <div class="info">
+                    <i id="tempMaxIcon" class="fa-solid fa-temperature-arrow-up"></i>
+                    <div>
+                        <h4>Temp. max</h4>
+                        <p id="tempMax">
+                            30 <sup>C°</sup>
+                        </p>
+                    </div>
+                </div>
+                <div class="info">
+                    <i id="tempMinIcon" class="fa-solid fa-temperature-arrow-down"></i>
+                    <div>
+                        <h4>Temp. min</h4>
+                        <p id="tempMin">
+                            12 <sup>C°</sup>
+                        </p>
+                    </div>
+                </div>
+                <div class="info">
+                    <i id="humidityIcon" class="fa-solid fa-droplet"></i>
+                    <div>
+                        <h4>Umidade relativa</h4>
+                        <p id="humidity">
+                            100%
+                        </p>
+                    </div>
+                </div>
+                <div class="info">
+                    <i id="windIcon" class="fa-solid fa-wind"></i>
+                    <div>
+                        <h4>Vento</h4>
+                        <p id="wind">
+                            20 km/h
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="info">
-                <i id="tempMinIcon" class="fa-solid fa-temperature-low"></i>
-                <div>
-                    <h4>Temp. min</h4>
-                    <p id="tempMin">
-                        12 <sup>C°</sup>
-                    </p>
-                </div>
-            </div>
-            <div class="info">
-                <i id="humidityIcon" class="fa-solid fa-droplet"></i>
-                <div>
-                    <h4>Umidade relativa</h4>
-                    <p id="humidity">
-                        100%
-                    </p>
-                </div>
-            </div>
-            <div class="info">
-                <i id="windIcon" class="fa-solid fa-wind"></i>
-                <div>
-                    <h4>Vento</h4>
-                    <p id="wind">
-                        20 km/h
-                    </p>
-                </div>
-            </div>
+            <div id="alert"></div>
         </div>
         <div class="box-maps h-100 z-0" id="map"></div>
         <div class="box-data z-0">
@@ -82,6 +95,7 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="JS/map.js"></script>
+    <script src="JS/weather.js"></script>
 </body>
 
 </html>

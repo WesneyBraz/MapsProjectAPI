@@ -2,7 +2,7 @@ html,
 body {
     height: 90%;
     margin: 0;
-    background-image: linear-gradient(to right, rgb(9, 31, 224), rgb(182, 228, 243));
+    background-image: linear-gradient(to right, rgb(71, 89, 255), rgb(182, 228, 243));
 }
 
 .box-maps {
@@ -21,8 +21,9 @@ body {
     margin: 10px;
     border: 2px solid black;
     border-radius: 10px;
-    background-color: white;
+    background-color: #abd3de;
     box-shadow: 5px 5px 5px rgb(84, 86, 87);
+    padding: 5px;
 }
 
 .container-box {
@@ -32,4 +33,60 @@ body {
     width: 90%;
     height: 60%;
     margin: 10% 0 0 5%;
+}
+
+#info {
+    background-color: #f2efe9;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 5px;
+    margin-bottom: 2%;
+}
+
+#others-info {
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+#others-info .info {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    background-color: #f2efe9;
+    gap: 10px;
+}
+
+#others-info .info h4 {
+    font-size: 2vh;
+    font-weight: 600;
+}
+
+#others-info .info i {
+    text-align: center;
+    font-size: 4vh;
+    width: 20%;
+}
+
+#tempMaxIcon {
+    color: red;
+}
+
+#tempMinIcon {
+    color: blue;
+}
+
+#humidityIcon {
+    color: lightblue;
+}
+
+#windIcon {
+    color: white;
 }
