@@ -53,7 +53,8 @@ body {
     gap: 12px;
 }
 
-#others-info .info {
+#others-info .info,
+#main-info .info {
     display: flex;
     align-items: center;
     justify-content: start;
@@ -62,6 +63,11 @@ body {
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
     background-color: #f2efe9;
     gap: 10px;
+}
+
+#main-info .info {
+    margin-bottom: 10px;
+    height: 80%;
 }
 
 #others-info .info h4 {
@@ -76,17 +82,28 @@ body {
 }
 
 #tempMaxIcon {
-    color: red;
+    color: rgb(197, 11, 11);
 }
 
 #tempMinIcon {
-    color: blue;
+    color: rgb(12, 12, 173);
 }
 
 #humidityIcon {
-    color: lightblue;
+    color: rgb(67, 208, 255);
 }
 
 #windIcon {
     color: white;
+}
+
+i#locationIcon,
+strong {
+    display: inline-block;
+}
+
+#first-info {
+    display: flex;
+    align-items: center;
+    justify-content: start;
 }

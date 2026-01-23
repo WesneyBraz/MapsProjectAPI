@@ -26,7 +26,7 @@ document.getElementById('searchBtn').addEventListener('click', async () => {
             markupFirst = L.marker([lat, lon]).addTo(map)
                 /*.bindPopup(display_name)
                 .openPopup()*/;
-                
+
             map.setView([lat, lon], 15);
         } else {
             alert('Não foi possivel encontrar o local!');
