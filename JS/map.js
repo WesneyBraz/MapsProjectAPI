@@ -1,4 +1,4 @@
-const map = L.map('map').setView([-15.793889, -47.882778], 2);
+const map = L.map('map').setView([-15.793889, -47.882778], 4);
 
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -27,7 +27,7 @@ document.getElementById('searchBtn').addEventListener('click', async () => {
                 /*.bindPopup(display_name)
                 .openPopup()*/;
 
-            map.setView([lat, lon], 15);
+            map.setView([lat, lon], 11);
         } else {
             alert('Não foi possivel encontrar o local!');
         }

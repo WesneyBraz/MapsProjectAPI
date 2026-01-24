@@ -19,10 +19,11 @@
 </head>
 
 <body>
-    <div class="position-absolute top-0 start-50 translate-middle-x mt-3 z-3 d-flex justify-content-center w-50">
+    <div class="position-absolute top-0 start-50 translate-middle-x mt-3 z-3 d-flex justify-content-center w-20">
         <div class="input-group">
-            <input type="text" id="searchInput" class="form-control" placeholder="Pesquise por um local">
-            <button class="btn btn-primary" id="searchBtn">Pesquisar</button>
+            <input type="text" id="searchInput" class="form-control" placeholder="Digite o CEP">
+            <button class="btn btn-primary" id="searchBtn">Consultar</button>
+            <button class="btn btn-secondary" id="searchBtn2">Consultar</button>
         </div>
     </div>
     <div class="container-box">
@@ -90,7 +91,18 @@
         </div>
         <div class="box-maps h-100 z-0" id="map"></div>
         <div class="box-data z-0">
-            <p>dados do local</p>
+            <strong>
+                <p id="testeCEP">Informações do CEP</p>
+            </strong>
+            <div class="info-cep">
+                <div class="dataCep" id="testeT"><label for="logradouro">Endereço</label><input type="text" id="logradouro"></div>
+                <div class="dataCep"><label for="bairro">Bairro</label><input type="text" id="bairro"></div>
+                <div class="dataCep"><label for="localidade">Cidade</label><input type="text" id="localidade"></div>
+                <div class="dataCep"><label for="uf">UF</label><input type="text" id="uf"></div>
+                <div class="dataCep"><label for="regiao">Região</label><input type="text" id="regiao"></div>
+                <!--<div class="dataCep"><label>DDD</label><input type="text" id="ddd"></div>-->
+            </div>
+
         </div>
     </div>
 
@@ -98,6 +110,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="JS/map.js"></script>
     <script src="JS/weather.js"></script>
+    <script src="JS/location.js"></script>
 </body>
 
 </html>
