@@ -21,9 +21,9 @@
 <body>
     <div class="position-absolute top-0 start-50 translate-middle-x mt-3 z-3 d-flex justify-content-center w-20">
         <div class="input-group">
-            <input type="text" id="searchInput" class="form-control" placeholder="Digite o CEP">
+            <label for="searchInput"> Digite o CEP </label>
+            <input type="text" id="searchInput" class="form-control" placeholder="00000-000" maxlength="9">
             <button class="btn btn-primary" id="searchBtn">Consultar</button>
-            <button class="btn btn-secondary" id="searchBtn2">Consultar</button>
         </div>
     </div>
     <div class="container-box">
@@ -95,12 +95,12 @@
                 <p id="testeCEP">Informações do CEP</p>
             </strong>
             <div class="info-cep">
-                <div class="dataCep" id="testeT"><label for="logradouro">Endereço</label><input type="text" id="logradouro"></div>
+                <div class="dataCep"><label for="logradouro">Endereço</label><input type="text" id="logradouro"></div>
                 <div class="dataCep"><label for="bairro">Bairro</label><input type="text" id="bairro"></div>
                 <div class="dataCep"><label for="localidade">Cidade</label><input type="text" id="localidade"></div>
                 <div class="dataCep"><label for="uf">UF</label><input type="text" id="uf"></div>
                 <div class="dataCep"><label for="regiao">Região</label><input type="text" id="regiao"></div>
-                <!--<div class="dataCep"><label>DDD</label><input type="text" id="ddd"></div>-->
+                <div class="dataCep"><label>DDD</label><input type="text" id="ddd"></div>
             </div>
 
         </div>
@@ -111,6 +111,7 @@
     <script src="JS/map.js"></script>
     <script src="JS/weather.js"></script>
     <script src="JS/location.js"></script>
+    <script src="JS/mask.js"></script>
 </body>
 
 </html>

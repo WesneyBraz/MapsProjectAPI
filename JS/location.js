@@ -7,11 +7,14 @@ fillData = (dados) => {
     document.getElementById('ddd').value = dados.ddd;
 }
 
-document.getElementById('searchBtn2').addEventListener('click', async () => {
+document.getElementById('searchBtn').addEventListener('click', async () => {
     const cep = document.getElementById('searchInput').value;
     const url = `https://viacep.com.br/ws/${cep}/json/`;
 
     const response = await fetch(url);
     const dados = await response.json();
     fillData(dados);
+
+    buscarLocalNoMapa(`${dados.localidade}, ${dados.uf}`);
+    buscarClimaPorCidade(dados.localidade);
 });

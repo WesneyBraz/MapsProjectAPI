@@ -112,19 +112,24 @@ strong {
     justify-content: start;
 }
 
-.info-cep {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-}
-
 .dataCep input {
     pointer-events: none;
-    background-color: rgb(228, 222, 222);
+    background-color: rgb(207, 204, 204);
     border-radius: 10px;
     border: 1px solid black;
 }
 
-.dataCep {
+.dataCep input {
     border-radius: 10px;
+    width: 80%;
+}
+
+label {
+    display: block;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.input-group {
+    align-items: center;
 }
