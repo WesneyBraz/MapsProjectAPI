@@ -1,3 +1,26 @@
+async function buscarCep(cep) {
+    try {
+        const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+        const dados = await response.json();
+
+        if (dados.erro) {
+            resetarDados();
+            mostrarErro('CEP não identificado');
+            return;
+        }
+
+        fillData(dados);
+        document.querySelector('#alert').innerHTML = '';
+
+        buscarClimaPorCidade(dados.localidade);
+        buscarLocalNoMapa(`${dados.localidade}, ${dados.uf}`);
+
+    } catch (error) {
+        resetarDados();
+        mostrarErro('Erro ao consultar o CEP');
+    }
+}
+
 fillData = (dados) => {
     document.getElementById('logradouro').value = dados.logradouro;
     document.getElementById('bairro').value = dados.bairro;
@@ -7,14 +30,26 @@ fillData = (dados) => {
     document.getElementById('ddd').value = dados.ddd;
 }
 
-document.getElementById('searchBtn').addEventListener('click', async () => {
-    const cep = document.getElementById('searchInput').value;
-    const url = `https://viacep.com.br/ws/${cep}/json/`;
+function resetarDados() {
+    document.getElementById('logradouro').value = '';
+    document.getElementById('bairro').value = '';
+    document.getElementById('localidade').value = '';
+    document.getElementById('uf').value = '';
+    document.getElementById('regiao').value = '';
+    document.getElementById('ddd').value = '';
 
-    const response = await fetch(url);
-    const dados = await response.json();
-    fillData(dados);
+    document.querySelector('#location').innerHTML = 'Cidade';
+    document.querySelector('#temp').innerHTML = '-- <sup>C°</sup>';
+    document.querySelector('#tempMax').innerHTML = '-- <sup>C°</sup>';
+    document.querySelector('#tempMin').innerHTML = '-- <sup>C°</sup>';
+    document.querySelector('#wind').innerHTML = '-- km/h';
+    document.querySelector('#humidity').innerHTML = '--%';
 
-    buscarLocalNoMapa(`${dados.localidade}, ${dados.uf}`);
-    buscarClimaPorCidade(dados.localidade);
-});
+    document.querySelector('#alert').innerHTML = '';
+    
+    resetarMapa();
+}
+
+function mostrarErro(msg) {
+    document.querySelector('#alert').innerHTML = msg;
+}

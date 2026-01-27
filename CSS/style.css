@@ -133,3 +133,7 @@ label {
 .input-group {
     align-items: center;
 }
+
+input#searchInput {
+    margin-left: 5px;
+}

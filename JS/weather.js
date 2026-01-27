@@ -4,18 +4,18 @@ async function buscarClimaPorCidade(cityName) {
     const apiKey = '5daeb9e544596069e9e7f061b08a2e87';
     const apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURI(cityName)}&appid=${apiKey}&units=metric&lang=pt-br`;
 
-    const results = await fetch(apiURL);
-    const json = await results.json();
+    const response = await fetch(apiURL);
+    const dados = await response.json();
 
-    if (json.cod === 200) {
+    if (dados.cod === 200) {
         showInfo({
-            city: json.name,
-            country: json.sys.country,
-            temp: json.main.temp,
-            tempMax: json.main.temp_max,
-            tempMin: json.main.temp_min,
-            windSpeed: json.wind.speed,
-            humidity: json.main.humidity
+            city: dados.name,
+            country: dados.sys.country,
+            temp: dados.main.temp,
+            tempMax: dados.main.temp_max,
+            tempMin: dados.main.temp_min,
+            windSpeed: dados.wind.speed,
+            humidity: dados.main.humidity
         });
     } else {
         showAlert("Não foi possível localizar o clima");
