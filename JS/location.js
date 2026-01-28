@@ -44,6 +44,8 @@ function resetarDados() {
     document.querySelector('#tempMin').innerHTML = '-- <sup>C°</sup>';
     document.querySelector('#wind').innerHTML = '-- km/h';
     document.querySelector('#humidity').innerHTML = '--%';
+    document.querySelector('#tempDescription').innerHTML = 'Clima';
+    document.querySelector('#weatherIcon').setAttribute('src', `https://openweathermap.org/img/wn/03n@2x.png`);
 
     document.querySelector('#alert').innerHTML = '';
     

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -41,11 +41,15 @@
             </div>
             <div id="main-info">
                 <div class="info">
-                    <i class="fa-solid fa-temperature-three-quarters"></i>
-                    <div>
-                        <p id="temp">
-                            30 <sup>C°</sup>
-                        </p>
+                    <div id="tempIcon">
+                        <img id="weatherIcon" src="https://openweathermap.org/img/wn/04d@2x.png">
+                        <div>
+                            <p id="temp">
+                                30 <sup>C°</sup>
+                                <i class="fa-solid fa-temperature-three-quarters"></i>
+                            </p>
+                            <p id="tempDescription" class="capitalizar">Clima</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -108,7 +112,7 @@
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    
+
     <script src="JS/search.js"></script>
     <script src="JS/map.js"></script>
     <script src="JS/weather.js"></script>

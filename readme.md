@@ -1,9 +1,12 @@
 # MapsProjectAPI
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+
+- https://wesneybraz.github.io/MapsProjectAPI/
 
 ## Descrição 
 O MapsProjectAPI é um projeto web desenvolvido com as tecnologias fundamentais da web (HTML, CSS e JavaScript) que permite consultar informações completas de uma localidade no Brasil a partir de um CEP.
 
-O principal objetivo deste projeto é demonstrar a integração completa de APIs open source no front-end, coordenando os dados e utilizando JavaScript puro, sem a necessidade de backend ou frameworks adicionais, aplicando boas práticas de JavaScript, manipulação do DOM e consumo de serviços externos, sem o uso de servidores intermediários.
+O principal objetivo deste projeto é demonstrar a integração completa de APIs open source no front-end, coordenando os dados e utilizando JavaScript puro, sem a necessidade de backend ou frameworks adicionais, aplicando as boas práticas de JavaScript, manipulação do DOM e consumo de serviços externos, sem o uso de servidores intermediários.
 
 A partir da consulta do CEP, a aplicação:
 
@@ -90,3 +93,4 @@ https://www.openstreetmap.org/
 - Atualização dinâmica do clima e mapa;
 
 - Limpeza automática das informações em caso de erro.
+
