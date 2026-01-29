@@ -178,6 +178,10 @@ input#searchInput {
         text-align: center;
     }
 
+    button#searchBtn {
+        border-radius: 10px;
+    }
+
     #searchInput {
         width: 120px;
         margin-left: 0px !important;
