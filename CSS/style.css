@@ -6,8 +6,8 @@ body {
 }
 
 .box-maps {
-    height: 100% !important;
-    width: 100% !important;
+    height: 100%;
+    width: 100%;
     margin: 10px;
     border: 2px solid black;
     border-radius: 10px;
@@ -16,8 +16,8 @@ body {
 
 .box-weather,
 .box-data {
-    height: 100% !important;
-    width: 50% !important;
+    height: 100%;
+    width: 50%;
     margin: 10px;
     border: 2px solid black;
     border-radius: 10px;
@@ -90,7 +90,7 @@ body {
     color: rgb(12, 12, 173);
 }
 
-#tempIcon{
+#tempIcon {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -139,7 +139,7 @@ input#searchInput {
     margin-left: 5px;
 }
 
-.dataCep{
+.dataCep {
     text-align: start;
 }
 
@@ -148,12 +148,61 @@ input#searchInput {
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
 
-#tempDescription{
+#tempDescription {
     font-size: 2vh;
     font-weight: 600;
 }
 
 .capitalizar::first-letter {
-  text-transform: uppercase;
+    text-transform: uppercase;
 }
 
+@media(max-width: 900px) {
+    .container-box {
+        flex-wrap: wrap;
+        width: 90%;
+        height: 70%;
+    }
+
+    .box-weather,
+    .box-data {
+        width: 100%;
+    }
+}
+
+@media(max-width: 600px) {
+    .input-group {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 5px;
+        text-align: center;
+    }
+
+    #searchInput {
+        width: 120px;
+        margin-left: 0px !important;
+    }
+
+    .container-box {
+        margin: 40% 0 0 5%;
+    }
+
+}
+
+html,
+body {
+    height: 100%;
+}
+
+@media (max-height: 900px) {
+    .container-box {
+        height: calc(80vh - 140px);
+    }
+
+    .box-weather,
+    .box-data {
+        max-height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+}
